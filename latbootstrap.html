@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercie</title>
+    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/latbootstrap.css" />
+  </head>
 
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">Mercie</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kategori">Kategori</a></li>
+            <li class="nav-item"><a class="nav-link" href="#produk">Coming Soon</a></li>
+            <li class="nav-item"><a class="nav-link" href="#promo">Promo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <video autoplay muted loop class="bg-video">
+        <source src="asset/img/1730806330098-0001-0250.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <div class="hero-content text-center text-white animate-fadeup">
+        <h1 class="display-4 fw-bold mt-5">Mercie Product</h1>
+        <p class="lead">Fashion, Lifestyle, Culture</p>
+      </div>
+    </section>
+
+    <!-- KATEGORI -->
+    <section id="kategori" class="py-5 bg-light text-dark">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Kategori Produk</h2>
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="card h-100 shadow-sm kategori-overlay" data-bs-toggle="modal" data-bs-target="#popup1">
+              <img src="asset/img/1745050289111-DSC05954_resized2048-jpg.webp" class="card-img-top" alt="Kategori Hoodie">
+              <div class="overlay-text">Hoodie</div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100 shadow-sm kategori-overlay" data-bs-toggle="modal" data-bs-target="#popup2">
+              <img src="asset/img/1758009964893-WhatsApp_Image_2025-09-16_at_150548_0e1a6d9e_resized1024-jpg.webp" class="card-img-top" alt="Kategori Jacket">
+              <div class="overlay-text">Jacket</div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100 shadow-sm kategori-overlay" data-bs-toggle="modal" data-bs-target="#popup3">
+              <img src="asset/img/1760966302356-DSC00448_resized1024-JPEG.webp" class="card-img-top" alt="Kategori Tshirt">
+              <div class="overlay-text">Tshirt</div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100 shadow-sm kategori-overlay" data-bs-toggle="modal" data-bs-target="#popup4">
+              <img src="asset/img/1745050327048-DSC05507_resized1024-jpg.webp" class="card-img-top" alt="Kategori Pants">
+              <div class="overlay-text">Pants</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMING SOON -->
+    <section id="produk" class="comingsoon-section d-flex align-items-center justify-content-center text-center text-white">
+      <div class="container">
+        <h2 class="comingsoon-title">COMING SOON</h2>
+        <div class="comingsoon-box mt-5 mx-auto">
+          <div class="glow-ring"></div>
+          <img src="asset/img/New pieces, real textures, real details. See you there.Catch us @u.s.s , JCC Senayan, Nov 7–9 20.jpg" alt="Coming Soon" class="comingsoon-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO DENGAN VIDEO -->
+    <section id="promo" class="promo-section d-flex text-center text-white">
+      <!-- Video Background -->
+      <video autoplay muted loop class="promo-video">
+        <source src="asset/img/7 -9 NOVEMBER 2025 @u.s.s EXCLUSIVE RELEASE.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Overlay Gelap -->
+      <div class="promo-overlay"></div>
+
+      <!-- Konten di tengah -->
+      <div class="promo-content w-100">
+        <h2 class="fw-bold mb-3 promo-title">Promo Spesial</h2>
+        <p class="promo-text">Dapatkan diskon hingga 50% untuk produk pilihan bulan ini!</p>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="py-5 text-dark">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Hubungi Kami</h2>
+        <p>Email: mercie99@gmail.com | Instagram: @mercie.product</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-light py-3 bg-dark">
+      <p>© 2025 Mercie. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+/* --- SCROLL SMOOTH --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+/* --- HERO --- */
+.hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+/* --- ANIMASI HERO --- */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeup {
+  animation: fadeUp 1.8s ease-out forwards;
+}
+
+/* --- SECTION UMUM --- */
+section {
+  position: relative;
+  z-index: 5;
+  padding-top: 100px;
+}
+
+/* --- KATEGORI --- */
+#kategori {
+  background-color: #f8f9fa;
+  color: #000;
+}
+#kategori .card img {
+  border-radius: 8px 8px 0 0;
+}
+
+/* KATEGORI OVERLAY */
+.kategori-overlay {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.kategori-overlay img {
+  transition: transform 0.4s ease;
+}
+.kategori-overlay:hover img {
+  transform: scale(1.1);
+}
+.kategori-overlay .overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.kategori-overlay:hover .overlay-text {
+  opacity: 1;
+}
+
+/* --- COMING SOON SECTION --- */
+.comingsoon-section {
+  background: linear-gradient(135deg, #000 40%, #111 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.comingsoon-title {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #fff, #888, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  from { background-position: -200px; }
+  to { background-position: 200px; }
+}
+
+.comingsoon-box {
+  position: relative;
+  width: 600px;
+  max-width: 90%;
+}
+
+.glow-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 110%;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+}
+
+.comingsoon-img {
+  border-radius: 20px;
+  width: 100%;
+  filter: brightness(85%);
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.comingsoon-img:hover {
+  transform: scale(1.05);
+  filter: brightness(100%);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+/* --- PROMO SECTION DENGAN VIDEO --- */
+.promo-section {
+  position: relative;
+  min-height: 60vh; /* tinggi section */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  overflow: hidden;
+}
+
+.promo-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.promo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+.promo-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
+.promo-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.promo-text {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #000;
+}
