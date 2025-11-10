@@ -8,6 +8,10 @@ html {
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(6px);
 }
+.navbar .nav-link.active {
+  color: #ffc107 !important;
+  font-weight: bold;
+}
 
 /* --- HERO --- */
 .hero {
@@ -15,9 +19,8 @@ html {
   z-index: 2;
   text-align: center;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 55px;
 }
-
 .bg-video {
   position: absolute;
   top: 0;
@@ -27,7 +30,6 @@ html {
   object-fit: cover;
   z-index: 0;
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -37,7 +39,6 @@ html {
   background: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -54,7 +55,7 @@ html {
   animation: fadeUp 1.8s ease-out forwards;
 }
 
-/* --- SECTION UMUM --- */
+/* --- SECTION --- */
 section {
   position: relative;
   z-index: 5;
@@ -69,8 +70,6 @@ section {
 #kategori .card img {
   border-radius: 8px 8px 0 0;
 }
-
-/* KATEGORI OVERLAY */
 .kategori-overlay {
   position: relative;
   overflow: hidden;
@@ -102,14 +101,13 @@ section {
   opacity: 1;
 }
 
-/* --- COMING SOON SECTION --- */
+/* --- COMING SOON --- */
 .comingsoon-section {
   background: linear-gradient(135deg, #000 40%, #111 100%);
   min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
-
 .comingsoon-title {
   font-size: 4rem;
   font-weight: 800;
@@ -120,18 +118,15 @@ section {
   -webkit-text-fill-color: transparent;
   animation: shine 3s linear infinite;
 }
-
 @keyframes shine {
   from { background-position: -200px; }
   to { background-position: 200px; }
 }
-
 .comingsoon-box {
   position: relative;
   width: 600px;
   max-width: 90%;
 }
-
 .glow-ring {
   position: absolute;
   top: 50%;
@@ -143,36 +138,32 @@ section {
   border-radius: 20px;
   animation: pulse 3s ease-in-out infinite;
 }
-
 @keyframes pulse {
   0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
   50% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
 }
-
 .comingsoon-img {
   border-radius: 20px;
   width: 100%;
   filter: brightness(85%);
   transition: transform 0.6s ease, filter 0.6s ease;
 }
-
 .comingsoon-img:hover {
   transform: scale(1.05);
   filter: brightness(100%);
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
 }
 
-/* --- PROMO SECTION DENGAN VIDEO --- */
+/* --- PROMO --- */
 .promo-section {
   position: relative;
-  min-height: 60vh; /* tinggi section */
+  min-height: 60vh;
   display: flex; 
   align-items: center; 
   justify-content: center; 
   text-align: center; 
   overflow: hidden;
 }
-
 .promo-video {
   position: absolute;
   top: 0;
@@ -182,7 +173,6 @@ section {
   object-fit: cover;
   z-index: 0;
 }
-
 .promo-overlay {
   position: absolute;
   top: 0;
@@ -192,20 +182,17 @@ section {
   background: rgba(0,0,0,0.55);
   z-index: 1;
 }
-
 .promo-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   padding: 0 15px;
 }
-
 .promo-title {
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 20px;
 }
-
 .promo-text {
   font-size: 1.2rem;
   color: #ddd;

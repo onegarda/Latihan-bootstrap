@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mercie</title>
+
+    <!-- Bootstrap & CSS -->
     <link href="asset/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="asset/css/latbootstrap.css" />
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
@@ -19,6 +24,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#kategori">Kategori</a></li>
             <li class="nav-item"><a class="nav-link" href="#produk">Coming Soon</a></li>
             <li class="nav-item"><a class="nav-link" href="#promo">Promo</a></li>
@@ -39,6 +45,7 @@
         <p class="lead">Fashion, Lifestyle, Culture</p>
       </div>
     </section>
+
 
     <!-- KATEGORI -->
     <section id="kategori" class="py-5 bg-light text-dark">
@@ -84,21 +91,24 @@
       </div>
     </section>
 
-    <!-- PROMO DENGAN VIDEO -->
+    <!-- PROMO -->
     <section id="promo" class="promo-section d-flex text-center text-white">
-      <!-- Video Background -->
       <video autoplay muted loop class="promo-video">
         <source src="asset/img/7 -9 NOVEMBER 2025 @u.s.s EXCLUSIVE RELEASE.mov" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
-
-      <!-- Overlay Gelap -->
       <div class="promo-overlay"></div>
-
-      <!-- Konten di tengah -->
       <div class="promo-content w-100">
         <h2 class="fw-bold mb-3 promo-title">Promo Spesial</h2>
         <p class="promo-text">Dapatkan diskon hingga 50% untuk produk pilihan bulan ini!</p>
+      </div>
+    </section>
+
+        <!-- ABOUT (CHARTJS) -->
+    <section id="about" class="py-5 bg-dark text-light text-center">
+      <div class="container">
+        <h2 class="fw-bold mb-4">About Us & Data Grafik</h2>
+        <p class="mb-4">Kami selalu berinovasi dalam setiap produk. Berikut contoh data penjualan kami:</p>
+        <canvas id="salesChart" width="400" height="200"></canvas>
       </div>
     </section>
 
@@ -116,5 +126,50 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- === SCRIPT: Menu Active + Smooth Scroll + ChartJS === -->
+    <script>
+      // --- MENU ACTIVE & AUTO SCROLL ---
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+          const target = document.querySelector(this.getAttribute('href'));
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // --- CHART.JS DATA STATIS ---
+      const ctx = document.getElementById('salesChart').getContext('2d');
+      const salesChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Hoodie', 'Jacket', 'Tshirt', 'Pants'],
+          datasets: [{
+            label: 'Penjualan (unit)',
+            data: [120, 90, 150, 80],
+            backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { labels: { color: 'white' } },
+            title: {
+              display: true,
+              text: 'Data Penjualan Produk 2025',
+              color: 'white',
+              font: { size: 18 }
+            }
+          },
+          scales: {
+            x: { ticks: { color: 'white' } },
+            y: { ticks: { color: 'white' } }
+          }
+        }
+      });
+    </script>
   </body>
 </html>
